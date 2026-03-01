@@ -71,14 +71,14 @@ The repository root should contain these publishable files for each release:
 ## Publishing Notes
 
 - Keep the `manifest.json` version in sync with the GitHub release tag.
-- Create a GitHub release like `v1.1.0`.
+- Create a GitHub release like `1.1.0` with no `v` prefix.
 - Attach or publish the root build artifacts required by Obsidian.
 - Submit the plugin repository to the Obsidian community plugin index.
 
 ## Manual Installation
 
 1. Download the latest release assets from the GitHub releases page.
-2. Copy `manifest.json`, `main.js`, and `versions.json` into `.obsidian/plugins/waveAnalyzer/`.
+2. Copy `manifest.json`, `main.js`, and `versions.json` into `.obsidian/plugins/wave-analyzer/`.
 3. Enable the plugin from Obsidian community plugins settings.
 
 ## License
