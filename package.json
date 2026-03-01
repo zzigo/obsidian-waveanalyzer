@@ -1,0 +1,31 @@
+{
+  "name": "wave-analyzer",
+  "version": "1.1.0",
+  "description": "Obsidian audio waveform and spectrogram analyzer with playback, seeking, looping, and optional spectral overlays.",
+  "main": "main.js",
+  "scripts": {
+    "build": "node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs"
+  },
+  "keywords": [
+    "obsidian",
+    "audio",
+    "wave",
+    "analyzer",
+    "spectrogram"
+  ],
+  "author": "Luciano Azzigotti",
+  "homepage": "https://github.com/zzigo/obsidian-waveanalyzer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzigo/obsidian-waveanalyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zzigo/obsidian-waveanalyzer/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "obsidian": "^1.4.0",
+    "esbuild": "^0.20.0"
+  }
+}
