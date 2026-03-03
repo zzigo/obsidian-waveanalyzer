@@ -2,7 +2,7 @@
 
 Wave Analyzer is an [Obsidian](https://obsidian.md) community plugin for previewing audio files as interactive waveforms and spectrograms inside notes.
 
-![](https://i.imgur.com/SFGbpxS.png)
+![](https://i.imgur.com/ODNE3Gr.png)
 
 
 Repository: [zzigo/obsidian-waveanalyzer](https://github.com/zzigo/obsidian-waveanalyzer)
