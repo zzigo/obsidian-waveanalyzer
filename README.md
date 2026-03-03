@@ -13,7 +13,7 @@ Repository: [zzigo/obsidian-waveanalyzer](https://github.com/zzigo/obsidian-wave
 - Play, stop, seek, and draggable playhead
 - Loop-region selection in waveform view
 - Variable spectrum resolution with 6 FFT sizes
-- Optional centroid and harmonicity overlays
+- Optional audio-descriptors centroid and harmonicity overlays
 - Timeline ruler with second and 10-second markers
 
 ## Usage
@@ -37,6 +37,30 @@ The plugin renders the analyzer directly in reading view.
 - `Drag`: move the playhead anywhere on the timeline
 - `Shift + drag` in waveform mode: create a loop region
 
+
+## Audio-Descriptor's roadmap
+
+[x] Spectral Centroid  
+    Indicates brightness by computing the spectrum’s center of mass.
+
+[x] Harmonicity  
+    Measures degree of periodic structure versus noise in the signal.
+
+[ ] Spectral Flux  
+    Quantifies frame-to-frame spectral change, capturing timbral and onset activity.
+
+[ ] Spectral Rolloff  
+    Frequency below which a fixed percentage of spectral energy accumulates.
+
+[ ] Zero-Crossing Rate  
+    Counts sign changes per frame; correlates with noisiness and high-frequency content.
+
+[ ] RMS Energy  
+    Computes signal power per frame, reflecting perceived loudness dynamics.
+
+[ ] Spectral Flatness  
+    Ratio of geometric to arithmetic mean; indicates tonality versus noise-like spectra.
+    
 ## Development
 
 This plugin currently uses plain JavaScript and esbuild.
@@ -59,27 +83,8 @@ Development watch:
 npm run dev
 ```
 
-## Release Files
+## Road Map 
 
-The repository root should contain these publishable files for each release:
-
-- `manifest.json`
-- `main.js`
-- `versions.json`
-- `styles.css` if a stylesheet is added later
-
-## Publishing Notes
-
-- Keep the `manifest.json` version in sync with the GitHub release tag.
-- Create a GitHub release like `1.1.0` with no `v` prefix.
-- Attach or publish the root build artifacts required by Obsidian.
-- Submit the plugin repository to the Obsidian community plugin index.
-
-## Manual Installation
-
-1. Download the latest release assets from the GitHub releases page.
-2. Copy `manifest.json`, `main.js`, and `versions.json` into `.obsidian/plugins/wave-analyzer/`.
-3. Enable the plugin from Obsidian community plugins settings.
 
 ## License
 
