@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   release:
@@ -38,25 +40,20 @@ jobs:
         run: npm run build
 
       - name: Package release assets
-        id: package
         run: |
           mkdir -p dist
-          cp manifest.json main.js versions.json dist/
+          cp manifest.json main.js dist/
           if [ -f styles.css ]; then
             cp styles.css dist/
           fi
 
-          cd dist
-          FILES=(manifest.json main.js versions.json)
-          if [ -f styles.css ]; then
-            FILES+=(styles.css)
-          fi
-
-          ZIP_NAME="obsidian-waveanalyzer-${GITHUB_REF_NAME}.zip"
-          zip -r "$ZIP_NAME" "${FILES[@]}"
-          echo "zip_name=$ZIP_NAME" >> "$GITHUB_OUTPUT"
+      - name: Generate artifact attestations
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/*
 
       - name: Publish GitHub release assets
         uses: softprops/action-gh-release@v2
         with:
           files: dist/*
+          generate_release_notes: true

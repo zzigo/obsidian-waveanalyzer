@@ -1,7 +1,7 @@
 {
   "id": "wave-analyzer",
   "name": "Wave Analyzer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "minAppVersion": "0.15.0",
   "description": "Visualize audio files with waveform and spectrogram playback, seeking, looping, and optional spectral analysis.",
   "author": "Luciano Azzigotti",

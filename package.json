@@ -1,6 +1,6 @@
 {
   "name": "wave-analyzer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Obsidian audio waveform and spectrogram analyzer with playback, seeking, looping, and optional spectral overlays.",
   "main": "main.js",
   "scripts": {
